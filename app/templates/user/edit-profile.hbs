@@ -1,0 +1,94 @@
+<div class="page-content edit-profile">
+  <div class="container pure-g">
+    <h2 class="page-title pure-u-1">个人中心</h2>
+    <div class="sidebar pure-u-1 pure-u-md-1-5">
+      <div class="sidebar-inner">
+        <div class="user-info">
+          <div class="avatar">
+          </div>
+          <div class="username">username</div>
+        </div>
+        <div class="msg-count">
+          <span>新动态</span>
+          <span id="count">000</span>
+        </div><!-- /user-info -->
+        <div class="side-nav">
+          <ul>
+            <li>{{#link-to 'index'}}系统消息{{/link-to}}</li>
+            <li>{{#link-to 'index'}}提醒{{/link-to}}</li>
+            <li>{{#link-to 'index'}}使用记录{{/link-to}}</li>
+            <li>{{#link-to 'index'}}账户信息查询{{/link-to}}</li>
+            <li>{{#link-to 'index'}}账户信息修改{{/link-to}}</li>
+            <li>{{#link-to 'index'}}公司形象设置{{/link-to}}</li>
+            <li>{{#link-to 'index'}}密码修改{{/link-to}}</li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /sidebar -->
+    <div class="content pure-u-1 pure-u-md-19-24">
+      <h2 class="page-title">个人信息编辑</h2>
+      <div class="form-wrap form-edit-profile pure-g">
+        <div class="notify pure-u-1">
+          提示：为了避免非法信息，修改个人信息部分内容需1-2个工作日审核，期间您将无法再次修改资料；对此给您带来的不便，敬请谅解！
+        </div>
+        <form action="action" method="post" accept-charset="utf-8">
+          <div class="input-field">
+            <div class="pure-u-1-4 pure-u-md-1-6">
+              <label for="username">用户名</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-5-6">
+              <input type="text" name="username"  id="username"/>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-4 pure-u-md-1-6">
+              <label for="name">姓名</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-5-6">
+              <input type="text" name="name"  id="name"/>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-4 pure-u-md-1-6">
+              <label for="company-name">公司名称</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-5-6">
+              <input type="text" name="company-name"  id="company-name"/>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-4 pure-u-md-1-6">
+              <label for="contact">联系方式</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-5-6">
+              <input type="text" name="contact"  id="contact"/>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-4 pure-u-md-1-6">
+              <label for="email">企业预留邮箱</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-5-6">
+              <input type="text" name="email"  id="email"/>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-4 pure-u-md-1-6">
+              <label for="s-code">验证码</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-5-6">
+              <input type="text" name="s-code" class="s-code"  id="s-code"/>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-4 pure-u-md-1-6">
+            </div>
+            <div class="pure-u-3-4 pure-u-md-5-6">
+              <button class="btn btn-save">保存-提交</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /content -->
+  </div>
+</div>

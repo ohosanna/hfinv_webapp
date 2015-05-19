@@ -1,0 +1,202 @@
+<div class="page-content financing-apply">
+  <div class="container">
+    <h2 class="page-title">资质认证</h2>
+    <div class="form-wrap apply-form pure-g">
+      <div class="pure-u-1 pure-u-md-4-5">
+        <form action="action" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+          <div class="input-field pure-g">
+            <div class="checkbox-desc pure-u-md-4-5">
+              我同意并遵守{{#link-to 'index'}}《红方金融用户服务协议》{{/link-to}}
+            </div>
+            <div class="pure-u-md-1-5">
+              <div class="slide-check">
+                <input type="checkbox" value="None" id="agreement" name="agreement" checked />
+                <label for="agreement"> </label>
+              </div>
+            </div>
+          </div>
+          <div class="h-split"></div>
+
+          <h2 class="title">公司信息</h2>
+
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="company-name">公司名称</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="company-name" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="company-add">公司地址</label>
+            </div>
+            <div class="pure-u-3-5">
+              <div id="company-add" class="select-group">
+                <select class="province"></select>
+                <select class="city"></select>
+                <select class="area"></select>
+              </div>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+            </div>
+            <div class="pure-u-3-5">
+              {{ input type="text" name="add-detail" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="phone">固定电话</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input type="text" name="phone" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="phone">成立时间</label>
+            </div>
+            <div class="pure-u-3-5">
+              <div id="created-at" class="select-group">
+                <select class="province"></select>
+                <select class="city"></select>
+                <select class="area"></select>
+              </div>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="money">注册资金</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input type="text" name="money" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="licence-num">营业执照号码</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input type="text" name="licence-num" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="agency-num">组织机构代码证号码</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input type="text" name="agency-num" }}
+            </div>
+          </div>
+
+          <div class="h-split"></div>
+
+          <h2 class="title">法人信息</h2>
+
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="name">姓名</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="name" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="id-card">身份证号</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="id-card" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="phone">联系电话</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="phone" }}
+            </div>
+          </div>
+          <div class="input-field radio-field">
+            <div class="pure-u-1-5">
+              <label for="marriage-status">婚姻状态</label>
+            </div>
+            <div class="pure-u-3-5">
+              <div class="radio-group">
+                <input type="radio" name="marriage-status" id="marriage-no" class="radio" value="false"/>
+                <label for="marriage-no">未婚</label>
+                <input type="radio" name="marriage-status" id="marriage-yes" class="radio" value="false"/>
+                <label for="marriage-yes">已婚</label>
+              </div>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="mate-name">配偶姓名（选填）</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="mate-name" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="mate-phone">配偶电话（选填）</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="mate-phone" }}
+            </div>
+          </div>
+
+          <div class="h-split"></div>
+
+          <h2 class="title">公司信息</h2>
+
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="bank">开户行名称</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="bank" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="bank-account">账户名</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="bank-account" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="bank-phone">联系电话</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="bank-phone" }}
+            </div>
+          </div>
+
+          <div class="input-field">
+            <div class="pure-u-1-5">
+            </div>
+            <div class="pure-u-3-5">
+              <button class="btn btn-save">保存并进行下一步</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-5">
+        <div class="privacy-promise">
+          <p>您提交认证后，红方将在3个工作日回复您认证的结果，并通过邮件和电话联系您。</p>
+          <p>通过授信后，您可以：</p>
+          <ul>
+            <li>提交融资申请</li>
+            <li>得到融资授信</li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /form-container -->
+  </div>
+</div>

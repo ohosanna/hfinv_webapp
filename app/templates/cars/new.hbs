@@ -1,0 +1,212 @@
+<div class="page-content car-new">
+  <div class="container">
+    <h2 class="page-title">库存车辆登记</h2>
+    <div class="form-wrap prj-apply-form pure-g">
+      <div class="pure-u-1 pure-u-md-4-5">
+        <form action="action" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+          <div class="input-field pure-g">
+            <div class="checkbox-desc pure-u-1 pure-u-md-4-5">
+              我同意并遵守{{#link-to 'index'}}《红方金融用户服务协议》{{/link-to}}
+            </div>
+            <div class="pure-u-1 pure-u-md-1-5">
+              <div class="slide-check">
+                <input type="checkbox" value="None" id="agreement" name="agreement" checked />
+                <label for="agreement"> </label>
+              </div>
+            </div>
+          </div>
+          <div class="h-split"></div>
+
+          <h2 class="title">车辆信息</h2>
+
+          <div class="input-field pure-g">
+            <div class="pure-u-1-4 pure-u-md-1-5">
+              <label for="car-name">车辆名称</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-4-5">
+              {{ input type="text" name="car-name" }}
+            </div>
+          </div>
+          <div class="input-field pure-g">
+            <div class="pure-u-1-4 pure-u-md-1-5">
+              <label for="license-at">上牌年份</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-4-5">
+              <div id="license-at" class="select-group">
+                <select class="year">
+                  <option value="">选择年份</option>
+                </select>
+                <select class="mouth">
+                  <option value="">选择月份</option>
+                </select>
+                <select class="day">
+                  <option value="">选择日期</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-field pure-g">
+            <div class="pure-u-1-4 pure-u-md-1-5">
+              <label for="mileage">已行驶里程（公里）</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-4-5">
+              {{ input type="text" name="mileage" }}
+            </div>
+          </div>
+          <div class="input-field pure-g">
+            <div class="pure-u-1-4 pure-u-md-1-5">
+              <label for="buy-price">收购价格</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-4-5">
+              {{ input type="text" name="buy-price" }}
+            </div>
+          </div>
+          <div class="input-field pure-g">
+            <div class="pure-u-1-4 pure-u-md-1-5">
+              <label for="buy-price">收购价格</label>
+              <label for="license-plate">车牌号</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-4-5">
+              {{ input type="text" name="licence-plate" }}
+            </div>
+          </div>
+          <div class="input-field pure-g">
+            <div class="pure-u-1-4 pure-u-md-1-5">
+              <label for="motor-num">发动机号</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-4-5">
+              {{ input type="text" name="motor-num" }}
+            </div>
+          </div>
+          <div class="input-field pure-g">
+            <div class="pure-u-1-4 pure-u-md-1-5">
+              <label for="frame-num">车架号</label>
+            </div>
+            <div class="pure-u-3-4 pure-u-md-4-5">
+              {{ input type="text" name="frame-num" }}
+            </div>
+          </div>
+
+          <div class="h-split"></div>
+
+          <h2 class="title">
+            资料上传
+            <span class="desc">请按照要求上传完整资料，确保资料真实、完整。</span>
+          </h2>
+
+          <div class="proof-img imgs-list">
+            <h3 class="pure-g">
+              <span class="pure-u-1 pure-u-md-1-5">
+                车辆证明文件
+              </span>
+              <span class="desc pure-u-1 pure-u-md-4-5">
+                请正确上传车辆的相关资料图片及证明照片
+              </span>
+            </h3>
+            <ul class="thum-list pure-g">
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap img-upload">
+                  <div class="upload-msg"> </div>
+                  <img src="" class="preview" />
+                  <label for="imgtype1">上传图片</label>
+                  <input type="file" name="imgtype1" id="imgtype1" onchange="HF.upyunUpload(this)" />
+                  <input type="hidden" name="imgtype1-url" value="" class="img-url">
+                  <div class="progress"></div>
+                </div>
+                <div class="img-type">
+                  照片类型
+                </div>
+                <div class="file-name">
+                  文件名：<span>文件名.png</span>
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+                <div class="img-type">
+                  照片类型
+                </div>
+                <div class="file-name">
+                  文件名：<span>文件名.png</span>
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+                <div class="img-type">
+                  照片类型
+                </div>
+                <div class="file-name">
+                  文件名：<span>文件名.png</span>
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+                <div class="img-type">
+                  照片类型
+                </div>
+                <div class="file-name">
+                  文件名：<span>文件名.png</span>
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5"><a href="/" class="btn-upload">+</a></li>
+            </ul>
+          </div>
+
+          <div class="outward-img imgs-list">
+            <h3 class="pure-g">
+              <span class="pure-u-1 pure-u-md-1-5">
+                车辆外观照片
+              </span>
+              <span class="desc pure-u-1 pure-u-md-4-5">
+                请根据要求上传车辆的外观照片
+              </span>
+            </h3>
+            <ul class="thum-list pure-g">
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5"><a href="/" class="btn-upload">+</a></li>
+            </ul>
+          </div>
+
+          <div class="additional-img imgs-list">
+            <h3 class="pure-g">
+              <span class="pure-u-1">
+                补充证明照片
+              </span>
+            </h3>
+            <ul class="thum-list pure-g">
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5"><a href="/" class="btn-upload">+</a></li>
+            </ul>
+          </div>
+
+          <div class="input-field">
+            <div class="pure-u-3-5">
+              <button class="btn btn-save">确认无误-提交</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-5">
+        <div class="privacy-promise">
+          <p>您提交认证后，红方将快速进行人工审核，并通过邮件和短信联系您。</p>
+        </div>
+      </div>
+    </div><!-- /form-wrap -->
+  </div>
+</div>

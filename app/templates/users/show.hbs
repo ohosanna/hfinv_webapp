@@ -1,0 +1,63 @@
+<div class="page-content user-index">
+  <div class="container pure-g">
+    <h2 class="page-title pure-u-1">个人中心</h2>
+    <div class="sidebar pure-u-1 pure-u-md-1-5">
+      <div class="sidebar-inner">
+        <div class="user-info">
+          <div class="avatar">
+          </div>
+          <div class="username">username</div>
+        </div>
+        <div class="msg-count">
+          <span>新动态</span>
+          <span id="count">000</span>
+        </div><!-- /user-info -->
+        <div class="side-nav">
+          <ul>
+            <li>{{#link-to 'index'}}系统消息{{/link-to}}</li>
+            <li>{{#link-to 'index'}}提醒{{/link-to}}</li>
+            <li>{{#link-to 'index'}}使用记录{{/link-to}}</li>
+            <li>{{#link-to 'index'}}账户信息查询{{/link-to}}</li>
+            <li>{{#link-to 'index'}}账户信息修改{{/link-to}}</li>
+            <li>{{#link-to 'index'}}公司形象设置{{/link-to}}</li>
+            <li>{{#link-to 'index'}}密码修改{{/link-to}}</li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /sidebar -->
+    <div class="content pure-u-1 pure-u-md-4-5">
+      <h2 class="page-title">操作记录</h2>
+      <div class="tools-bar">
+        {{#link-to 'index' class="current"}}授信{{/link-to}}
+        {{#link-to 'index'}}出库申请{{/link-to}}
+        {{#link-to 'index'}}入库申请{{/link-to}}
+        {{#link-to 'index'}}项目申请{{/link-to}}
+        {{#link-to 'index'}}每日动态{{/link-to}}
+      </div>
+      <div class="table-wrap">
+        <table class="table table-responsive table-operate-log">
+          <tr>
+            <td class="timestamps pure-u-md-5-24">0000-00-00 00:00:00</td>
+            <td class="info pure-u-md-15-24">车辆单号1234567789项目名称状态更亲至</td>
+            <td class="actions pure-u-md-3-24">{{#link-to 'index'}} 查看 {{/link-to}}</td>
+          </tr>
+          <tr>
+            <td class="timestamps pure-u-md-5-24">0000-00-00 00:00:00</td>
+            <td class="info pure-u-md-15-24">车辆单号1234567789项目名称状态更亲至</td>
+            <td class="actions pure-u-md-3-24">{{#link-to 'index'}} 查看 {{/link-to}}</td>
+          </tr>
+          <tr>
+            <td class="timestamps pure-u-md-5-24">0000-00-00 00:00:00</td>
+            <td class="info pure-u-md-15-24">车辆单号1234567789项目名称状态更亲至</td>
+            <td class="actions pure-u-md-3-24">{{#link-to 'index'}} 查看 {{/link-to}}</td>
+          </tr>
+          <tr>
+            <td class="timestamps pure-u-md-5-24">0000-00-00 00:00:00</td>
+            <td class="info pure-u-md-15-24">车辆单号1234567789项目名称状态更亲至</td>
+            <td class="actions pure-u-md-3-24">{{#link-to 'index'}} 查看 {{/link-to}}</td>
+          </tr>
+        </table>
+      </div>
+    </div><!-- /content -->
+  </div>
+</div>

@@ -1,0 +1,126 @@
+<div class="signup-wrap signup-apply">
+  <div class="container">
+    <div class="pure-g stage-container">
+      <div class="stage current pure-u-1-5">
+        <div class="stage-header"></div>
+        <div class="stage-contenr">
+          <h3 class="stage-title">填写信息</h3>
+        </div>
+      </div><!-- /stage -->
+      <div class="stage pure-u-1-5">
+        <div class="stage-header"></div>
+        <div class="stage-contenr">
+          <h3 class="stage-title">上传资料</h3>
+        </div>
+      </div><!-- /stage -->
+      <div class="stage pure-u-1-5">
+        <div class="stage-header"></div>
+        <div class="stage-contenr">
+          <h3 class="stage-title">提交审核</h3>
+        </div>
+      </div><!-- /stage -->
+      <div class="stage pure-u-1-5">
+        <div class="stage-header"></div>
+        <div class="stage-contenr">
+          <h3 class="stage-title">信息确认</h3>
+        </div>
+      </div><!-- /stage -->
+      <div class="stage pure-u-1-5">
+        <div class="stage-header"></div>
+        <div class="stage-contenr">
+          <h3 class="stage-title">完成</h3>
+        </div>
+      </div><!-- /stage -->
+    </div><!-- /stage-container -->
+
+    <div class="form-wrap pure-g">
+      <div class="pure-u-1 pure-u-md-4-5">
+        <form action="action" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+          <h2 class="title">公司信息</h2>
+
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="username">账户名</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="username" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="password">密码</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input type="password" name="password" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="password-confirmation">密码确认</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input type="password" name="password-confirmation" }}
+            </div>
+          </div>
+
+          <div class="h-split"></div>
+
+          <h2 class="title">用户信息</h2>
+
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="name">姓名</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="name" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="company-name">公司名</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="company-name" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="phone">联系电话</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="phone" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="email">企业邮箱</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="email" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="s-code">验证码</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="s-code" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+            </div>
+            <div class="pure-u-3-5">
+              <button class="btn btn-save">保存并进行下一步</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-5">
+        <div class="privacy-promise">
+          <p>红方承诺不会向任何第三方个人和机构泄露您的个人信息</p>
+        </div>
+      </div>
+    </div><!-- /form-container -->
+  </div>
+</div>

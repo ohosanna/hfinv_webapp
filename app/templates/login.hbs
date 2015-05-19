@@ -1,0 +1,19 @@
+<div class="page-login">
+  <div class="form-wrap pure-g">
+    <form id='login-form' class="login-form" method='post'>
+      <div class="input-field pure-u-1-1">
+        <input type="text" name="username" placeholder="请输入账号"/>
+      </div>
+      <div class="input-field pure-u-1">
+        <input type="password" name="password" placeholder="请输入密码"/>
+      </div>
+      <div class="input-field pure-u-1">
+        <button class="btn btn-login">登录</button>
+        {{#link-to 'forgotPassword' classNames="forgot-pw"}}忘记密码{{/link-to}}
+      </div>
+      <div class="input-field pure-u-1">
+        {{#link-to 'auth' classNames="sign-up"}}新用户注册{{/link-to}}
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+<div class="page-content project-apply">
+  <div class="container">
+    <h2 class="page-title">融资项目申请</h2>
+    <div class="form-wrap prj-apply-form pure-g">
+      <div class="pure-u-1 pure-u-md-4-5">
+        <form action="action" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+          <div class="input-field pure-g">
+            <div class="checkbox-desc pure-u-1 pure-u-md-4-5">
+              我同意并遵守{{#link-to 'index'}}《红方金融用户服务协议》{{/link-to}}
+            </div>
+            <div class="pure-u-1 pure-u-md-1-5">
+              <div class="slide-check">
+                <input type="checkbox" value="None" id="agreement" name="agreement" checked />
+                <label for="agreement"> </label>
+              </div>
+            </div>
+          </div>
+          <div class="h-split"></div>
+
+          <h2 class="title">融资信息</h2>
+
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="apply-amount">申请金额</label>
+            </div>
+            <div class="pure-u-3-5">
+              {{ input name="apply-amount" }}
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="pure-u-1-5">
+              <label for="repayment-cycle">还款周期</label>
+            </div>
+            <div class="pure-u-3-5">
+              <div class="radio-group">
+                <input type="radio" name="repayment-cycle" id="cycle7" class="radio" value="7" checked />
+                <label for="cycle7">7 天</label>
+                <input type="radio" name="repayment-cycle" id="cycle15" class="radio" value="15"/>
+                <label for="cycle15">15 天</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="h-split"></div>
+          <h2 class="title">车辆信息</h2>
+
+          <div class="car-actions pure-g">
+            <div class="pure-u-1 pure-u-md-1-2">
+              <a href="/" class="btn btn-select-car">选择库存车辆</a>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2">
+              <a href="/" class="btn btn-add-car">新增库存车辆</a>
+            </div>
+          </div>
+          <div class="cars-list imgs-list">
+            <ul class="thum-list pure-g">
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+                <div class="car-name">
+                  车辆名称
+                  <span>2012年 35000KM</span>
+                </div>
+                <div class="car-value">
+                  估值：<span>300,000.00 RMB</span><br />
+                  可贷款金额：<span>25,000.00 RMB</span>
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+                <div class="car-name">
+                  车辆名称
+                  <span>2012年 35000KM</span>
+                </div>
+                <div class="car-value">
+                  估值：<span>300,000.00 RMB</span><br />
+                  可贷款金额：<span>25,000.00 RMB</span>
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+                <div class="car-name">
+                  车辆名称
+                  <span>2012年 35000KM</span>
+                </div>
+                <div class="car-value">
+                  估值：<span>300,000.00 RMB</span><br />
+                  可贷款金额：<span>25,000.00 RMB</span>
+                </div>
+              </li>
+              <li class="pure-u-1-2 pure-u-md-1-5">
+                <div class="thum-wrap">
+                </div>
+                <div class="car-name">
+                  车辆名称
+                  <span>2012年 35000KM</span>
+                </div>
+                <div class="car-value">
+                  估值：<span>300,000.00 RMB</span><br />
+                  可贷款金额：<span>25,000.00 RMB</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="input-field">
+            <div class="pure-u-3-5">
+              <button class="btn btn-save">确认无误-提交</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-5">
+        <div class="privacy-promise">
+          <p>您提交认证后，红方将快速进行人工审核，并通过邮件和短信联系您。</p>
+        </div>
+      </div>
+    </div><!-- /form-wrap -->
+  </div>
+</div>
