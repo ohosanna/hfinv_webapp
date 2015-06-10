@@ -10,12 +10,19 @@ p {
   line-height: 150%;
   margin-bottom: 1em;
 }
+input {
+  background: #FFF;
+}
 .notifyjs-wrapper {
   letter-spacing: 0;
 }
 .container {
-  padding: 1em 2em;
-  max-width: 1700px;
+  padding: 1.25em 3.125em;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+.content {
+  min-height: 700px;
 }
 .page-title {
   font-size: 14pt;
@@ -29,6 +36,12 @@ p {
 }
 .tip {
   font-size: 9pt;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
 }
 .table {
   border-collapse: collapse;
@@ -83,14 +96,15 @@ p {
   color: #565656;
   background: #F1F1F1;
   .container {
-    padding: 0.5em 2em;
+    padding: 0.5em 3.125em;
   }
 }
 .header {
   height: 60px;
   position: relative;
+  z-index: 10;
   .container {
-    padding: 0 2em;
+    padding: 0 3.125em;
   }
 }
 .btn-show-nav {
@@ -129,7 +143,8 @@ p {
   li {
     display: inline-block;
     a {
-      color: #000;
+      font-size: 10pt;
+      color: #333;
       display: block;
       padding: 0 2em;
       line-height: 58px;
@@ -137,7 +152,9 @@ p {
         border-bottom: 2px solid #E41E1D;
       }
     }
-    a.current {
+  }
+  li.current {
+    a {
       color: #FFF;
       background: #E41E1D;
       border-bottom: 2px solid #E41E1D;
@@ -147,9 +164,10 @@ p {
     position: relative;
     vertical-align: middle;
     .drop-title {
-      text-align: left;
+      text-align: right;
       padding-left: 2em;
       cursor: pointer;
+      min-width: 5em;
       .username {
         display: inline-block;
         clear: both;
@@ -258,6 +276,13 @@ p {
   label {
     display: inline-block;
     text-align: right;
+  }
+  label.error {
+    background: #FFF1F0;
+    color: #E41E1D;
+    border: 1px solid rgba(216, 80, 48, 0.3);
+    padding: 0 0.75em;
+    margin: 0.5em 0;
   }
   input {
     border: 1px solid #DDD;
@@ -416,6 +441,11 @@ p {
         }
       }
     }
+    li.current {
+      a {
+        border-left: 2px solid #E41E1D;
+      }
+    }
   }
 }
 
@@ -454,6 +484,28 @@ p {
   .sign-up {
     color: #E41E1D;
     margin-right: 5em;
+  }
+}
+
+/* 找回密码页面 */
+#forgot-pw {
+  .content-wrapper {
+    background: #FFF;
+  }
+}
+.forgot-pw {
+  .form-wrap {
+    padding: 8em 0;
+    #s-code {
+      width: 30%;
+    }
+    .btn-sent-code {
+      border: 1px solid #E5E5E5;
+      background: #FAFAFA;
+      border-radius: 5px;
+      line-height: 30px;
+      padding: 0 5px;
+    }
   }
 }
 
@@ -500,6 +552,7 @@ p {
     position: relative;
     text-align: center;
     min-height: 50px;
+    z-index: 1;
     &:after,
     &:before {
       background: #FFF;
@@ -617,22 +670,10 @@ p {
     height: 150px;
     background: #FAFAFA;
     margin-bottom: 1em;
-    .hover {
-      line-height: 160%;
-      text-align: center;
-      width: 100;
-      padding: 40px 25px;
-      height: 70px;
-      position: absolute;
-      top: -200em;
-      left: 0;
-      color: #666;
-      background: rgba(0, 0, 0, 0.1);
-    }
-    &:hover {
-      .hover {
-        top: 0;
-      }
+    label {
+      height: 150px;
+      line-height: 150px;
+      width: 150px;
     }
   }
   .com-full-name {
@@ -746,12 +787,64 @@ p {
 }
 
 /* 新增库存车辆页面 */
+.img-upload {
+  position: relative;
+  input {
+    display: none;
+  }
+  label {
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    left: 0;
+    top: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    background: transparent;
+    span {
+      display: none;
+    }
+  }
+  img[src=""] {
+    display: none;
+  }
+  .upload-msg {
+    padding: 0.8em;
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .error {
+    background: #E41E1D;
+  }
+  .success {
+    background: #24CE3B;
+  }
+  .progress {
+    height: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(36, 213, 58, 0.8);
+  }
+  &:hover {
+    label {
+      color: #FFF;
+      background: rgba(0, 0, 0, 0.5);
+      span {
+        display: block;
+      }
+    }
+  }
+}
 .imgs-list {
   padding: 1em 0;
   h3 {
     font-size: 11pt;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     .desc {
       font-size: 10pt;
     }
@@ -773,6 +866,22 @@ p {
     border: 1px dashed #EEE;
     border-radius: 3px;
   }
+  .selected {
+    position: relative;
+    .thum-wrap {
+      border: 1px solid #E41E1D;
+    }
+    &:before {
+	    font-family: 'icomoon';
+      font-size: 13pt;
+      color: #E41E1D;
+	    content: "\f00c";
+      position: absolute;
+      right: 2em;
+      top: 1em;
+      z-index: 10;
+    }
+  }
   .btn-upload {
     line-height: 135px;
     text-align: center;
@@ -785,49 +894,10 @@ p {
     overflow: hidden;
     position: relative;
     text-align: center;
-    input {
-      display: none;
-    }
     label {
-      position: absolute;
       width: 135px;
-      line-height: 135px;
       height: 135px;
-      text-align: center;
-      left: 0;
-      top: -1000em;
-    }
-    img[src=""] {
-      display: none;
-    }
-    .upload-msg {
-      padding: 0.8em;
-      color: #FFF;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .error {
-      background: #E41E1D;
-    }
-    .success {
-      background: #24CE3B;
-    }
-    .progress {
-      height: 16px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 10;
-      background: rgba(36, 213, 58, 0.8);
-    }
-    &:hover {
-      label {
-        top: 0;
-        z-index: 100;
-        color: #FFF;
-        background: rgba(0, 0, 0, 0.5);
-      }
+      line-height: 135px;
     }
   }
   .file-name {
@@ -838,7 +908,7 @@ p {
   }
 }
 .proof-img {
-  padding-top: 3em;
+  padding-top: 2em;
 }
 .additional-img {
   padding-bottom: 3em;
@@ -892,11 +962,15 @@ p {
     }
   }
   .car-thum {
-    width: 105px;
-    height: 105px;
+    width: 109px;
+    height: 109px;
     border: 1px solid #DDD;
     float: left;
     margin-right: 1em;
+    overflow: hidden;
+    img {
+      width: 110px;
+    }
   }
   .car-info {
     .car-name {
@@ -1217,6 +1291,25 @@ p {
   }
 }
 
+/* 车辆信息 */
+.car-show {
+  .text-left {
+    text-align: left;
+  }
+  .name-info {
+    margin-bottom: 2em;
+  }
+  .car-name {
+    font-size: 13pt;
+    font-weight: bold;
+    padding-right: 1.5em;
+  }
+  .company-name {
+    color: #666;
+    font-size: 10pt;
+  }
+}
+
 /* 临时出库申请 */
 .car-out {
   .main-wrap {
@@ -1372,6 +1465,14 @@ p {
       background: transparent;
     }
   }
+  .btn-add {
+    vertical-align: middle;
+    display: inline-block;
+    color: #E41E1D;
+    font-size: 24pt;
+    font-weight: bold;
+    padding: 0 0.5em 0 1em;
+  }
 }
 .car-index {
   .cars-list {
@@ -1459,7 +1560,7 @@ p {
   li {
     padding: 1em 0;
     &:nth-child(even) {
-      background: #F0F0F0;
+      background: #FAFAFA;
     }
   }
   .thum-wrap {
@@ -1467,10 +1568,11 @@ p {
   }
   .car-thum {
     display: inline-block;
-    width: 105px;
-    height: 105px;
+    width: 119px;
+    height: 119px;
     border: 1px solid #DDD;
     margin: 0 2em 0.5em 0;
+    overflow: hidden;
   }
   .car-name,
   .view-detail {
@@ -1645,6 +1747,10 @@ p {
       }
     }
   }
+  .info-field,
+  .imgs-list li {
+    margin-bottom: 0.75em;
+  }
   .apply-tab {
     margin: 0 2em;
   }
@@ -1679,6 +1785,100 @@ p {
   }
 }
 
+/* 个人登录首页 */
+.main-index {
+  .box-title {
+    padding: 0;
+    .username {
+      display: inline-block;
+      padding: 1.25em 0;
+    }
+    .amount {
+      text-align: right;
+      padding: 1.25em;
+      border-left: 1px solid #E5E5E5;
+    }
+  }
+  .credit-info {
+    color: #FFF;
+    background: #E41E1D;
+    padding: 1em 2em;
+    line-height: 18px;
+    a.manage {
+      display: block;
+      color: #FFF;
+      text-align: right;
+    }
+  }
+  .credit-amount {
+    font-size: 12pt;
+    span {
+      font-size: 16pt;
+      padding: 0 1.25em;
+    }
+  }
+  .inventory-box,
+  .messages-box {
+    background: #FFF;
+    height: 340px;
+    .box-inner {
+      padding: 1.25em;
+    }
+  }
+  .inventory-box {
+    margin-right: 2em;
+  }
+  .info-box {
+    background: transparent;
+  }
+  .title {
+    height: 55px;
+    margin-bottom: 2em;
+    h3 {
+      float: left;
+      font-size: 14pt;
+      padding-top: 0.5em;
+    }
+    .cars-data {
+      float: right;
+      line-height: 180%;
+      color: #666;
+      span {
+        padding-left: 1.25em;
+      }
+    }
+  }
+  .messages-box {
+    .title {
+      margin-bottom: 0.5em;
+      h3 {
+        float: right;
+      }
+      .icon-bell {
+        display: block;
+        float: left;
+        padding-top: 0.3em;
+        font-size: 16pt;
+        color: #666;
+      }
+    }
+  }
+  .messages-list {
+    li {
+      padding: 1em 0;
+      line-height: 160%;
+      border-bottom: 1px solid #E5E5E5;
+    }
+  }
+  .project-status {
+    .box-title {
+      font-size: 14pt;
+      padding: 1.25em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
 .pagination {
   clear: both;
   text-align: center;
@@ -1696,6 +1896,7 @@ p {
     width: 36px;
     height: 20px;
     margin: 0 0.5em;
+    border: 1px solid #E5E5E5;
   }
 }
 

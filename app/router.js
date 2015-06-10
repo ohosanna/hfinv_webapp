@@ -42,6 +42,7 @@ Router.map(function() {
   });
   this.resource('cars', function(){
     this.route('new');
+    this.route('show', { path: '/:id' });
     this.route('out');
   });
 });

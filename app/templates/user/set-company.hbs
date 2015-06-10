@@ -31,12 +31,15 @@
         <h4 class="pure-u-1">您可以设置您公司的形象</h4>
         <div class="pure-u-1 pure-u-md-1-4">
           <div class="company-logo">
-            <a href="/" class="logo-wrap">
-              <span class="hover">
-                点击上传公司 <br />
-                logo
-              </span>
-            </a>
+            <div class="logo-wrap img-upload">
+              <div class="upload-message"></div>
+              <img class="preview" src="" />
+              <label for="company-logo">
+                <span>点击上传</span>
+              </label>
+              <input id="company-logo" name="company-logo" type="file" onchange="HF.upyun.upload(this)" />
+              <input class="img-url" type="hidden" value="" name="logopath" />
+            </div>
           </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
